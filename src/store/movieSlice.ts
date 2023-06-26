@@ -11,7 +11,7 @@ const initialState: MovieState = {
     items: [],
 };
 
-const { actions: moviesActions, reducer: moviesReducer } = createSlice({
+export const { actions: moviesActions, reducer: moviesReducer } = createSlice({
     name: 'movies',
     initialState,
     reducers: {
@@ -23,15 +23,9 @@ const { actions: moviesActions, reducer: moviesReducer } = createSlice({
 
 const rootSelector = (state: { movies: MovieState }) => state.movies;
 
-const moviesSelectors = {
+export const moviesSelectors = {
     selectMovies: createSelector(
         rootSelector,
         ({ items }) => items,
     ),
 }
-
-export {
-    moviesSelectors,
-    moviesActions,
-    moviesReducer,
-};
