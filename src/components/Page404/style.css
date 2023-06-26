@@ -1,0 +1,7 @@
+.not-found {
+  background-image: url('../../assets/lost_superman.gif');
+  background-size:  cover;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+}

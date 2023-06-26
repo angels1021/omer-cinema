@@ -1,0 +1,32 @@
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  gap: 16px;
+}
+
+.main-content > nav {
+  flex: 0;
+  width: 20%;
+}
+
+.main-content > main {
+  flex: 1;
+}
+
+.app-main > *:not(.main-content) {
+  flex: 0;
+}
+
+nav .nav-tab {
+  color: inherit;
+}
+
+nav .nav-tab.active {
+  border-right: 2px solid lightblue;
+}
