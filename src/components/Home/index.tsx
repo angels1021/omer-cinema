@@ -14,7 +14,6 @@ const Home = () => {
         if (movies.length) return;
 
         getMovies().then(({data}) => {
-            console.log({data})
             dispatch(moviesActions.setMovies(data));
         });
     }, [movies, dispatch])
