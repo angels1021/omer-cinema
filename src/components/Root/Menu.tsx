@@ -1,15 +1,22 @@
-import {NavLink} from "react-router-dom";
-import {Tabs, Tab } from '@mui/material';
+import { NavLink } from 'react-router-dom';
+import { Tabs, Tab } from '@mui/material';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 
 
 const Menu = () => (
-    <nav>
-        <Tabs orientation="vertical">
-            <Tab component={NavLink} to="/" label="Home" className="nav-tab" />
-            <Tab component={NavLink} to="/about" label="About" className="nav-tab" />
-        </Tabs>
-    </nav>
+    <Navbar expand="lg" className="bg-body-primary">
+        <Container>
+            <Navbar.Brand as={NavLink} to="/">Omer Cinema</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                    <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Container>
+    </Navbar>
 );
 
 export default Menu;

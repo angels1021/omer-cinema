@@ -1,15 +1,13 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
-import Menu from "./Menu";
+import Header from './Header';
+import Footer from './Footer';
+import Main from './Main';
 import './style.css';
 
 
 const Root = () => (
-    <div className="container app-main">
+    <div className="app-main">
         <Header />
-        <div className="main-content">
-            <Menu />
+        <div className="container main-content">
             <Main />
         </div>
         <Footer />

@@ -1,3 +1,9 @@
-const Header = () => (<header> Header </header>);
+import Menu from './Menu';
+
+const Header = () => (
+    <header>
+        <Menu />
+    </header>
+);
 
 export default Header;
