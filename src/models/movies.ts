@@ -4,8 +4,5 @@ export interface Movie {
     length: number;
     posterLink: string;
     videoLink: string;
-    link: string;
-    weight: number;
     releaseYear: string;
-    attributeIds: string[];
 }
