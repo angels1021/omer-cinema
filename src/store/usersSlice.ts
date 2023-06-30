@@ -6,6 +6,7 @@ import {User} from '../models';
 export interface UsersState {
     items: User[];
     initialized?: boolean;
+    current?: string;
 }
 
 const initialState: UsersState = {
@@ -20,6 +21,9 @@ export const { actions: usersActions, reducer: usersReducer } = createSlice({
         setUsers: (state, { payload }: PayloadAction<User[]>) => {
             state.items = payload;
             state.initialized = true;
+        },
+        setActiveUser: (state, { payload }: PayloadAction<string>) => {
+            state.current = payload;
         }
     }
 });
@@ -36,7 +40,19 @@ const selectIsInitialized = createSelector(
     ({initialized}) => initialized,
 );
 
+const selectCurrentUserId = createSelector(
+    rootSelector,
+    ({ current }) => current,
+);
+
+const selectActiveUser = createSelector(
+    selectUsers,
+    selectCurrentUserId,
+    (users, current) => current && users.find(u => u.id === current),
+);
+
 export const usersSelectors = {
     selectUsers,
     selectIsInitialized,
+    selectActiveUser,
 }

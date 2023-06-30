@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Container } from "react-bootstrap";
 
 import { usersActions, usersSelectors } from '../../store';
 import { getUsers } from '../../services';
@@ -23,9 +24,9 @@ const Root = () => {
     return (
         <div className="app-main">
             <Header />
-            <div className="container main-content">
+            <Container className="main-content">
                 <Main />
-            </div>
+            </Container>
             <Footer />
         </div>
     )

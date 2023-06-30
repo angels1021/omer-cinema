@@ -7,3 +7,5 @@ export interface User {
 
 export type SignupForm = Omit<User, 'id'>;
 
+export type LoginForm = Pick<User, 'name'| 'password'>;
+
