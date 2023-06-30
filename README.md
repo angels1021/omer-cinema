@@ -44,3 +44,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+Get order by order id => http://localhost:5206/api/orders/<id>
+
+* Get all orders => http://localhost:5206/api/orders
+
+* Get all movies => http://localhost:5206/api/movies
+
+* Get movies by id => http://localhost:5206/api/movies/<id>
+
+* Get all users => http://localhost:5206/api/users
+
+* Get users by id => http://localhost:5206/api/users/<id>
+
+* Add new order => POST http://localhost:5206/api/orders body: {"uid":"1", "mid": "1", "tickets": "2"}
+
+* Add new movie => POST http://localhost:5206/api/movies , body: {"name":"asdasd","id":"1","length":123,"posterLink":"", "releaseYear": 2000, "videoLink": ""}
+
+* Add new User => POST http://localhost:5206/api/users , body: {"uid":"1", "fname":"Efi", "lname": "Sabo", "email": "test@test.com", "password": "testttt"}

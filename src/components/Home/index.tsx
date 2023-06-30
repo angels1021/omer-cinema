@@ -14,7 +14,7 @@ const Home = () => {
         if (movies.length) return;
 
         getMovies().then(({data}) => {
-            dispatch(moviesActions.setMovies(data));
+            dispatch(moviesActions.setMovies(data.filter(m => m.posterLink)));
         });
     }, [movies, dispatch])
 
