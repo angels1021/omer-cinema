@@ -38,6 +38,7 @@ nav .nav-tab {
 .user-nav-wrapper {
   margin-left: auto;
   align-items: center;
+  display: flex;
 }
 
 .user-nav-wrapper .btn a {

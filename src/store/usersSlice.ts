@@ -22,6 +22,9 @@ export const { actions: usersActions, reducer: usersReducer } = createSlice({
             state.items = payload;
             state.initialized = true;
         },
+        addUser: (state, { payload }: PayloadAction<User>) => {
+            state.items.push(payload);
+        },
         setActiveUser: (state, { payload }: PayloadAction<string>) => {
             state.current = payload;
         }
