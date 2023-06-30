@@ -6,7 +6,7 @@ import {User} from '../models';
 export interface UsersState {
     items: User[];
     initialized?: boolean;
-    current?: string;
+    current?: string | null;
 }
 
 const initialState: UsersState = {
@@ -27,7 +27,10 @@ export const { actions: usersActions, reducer: usersReducer } = createSlice({
         },
         setActiveUser: (state, { payload }: PayloadAction<string>) => {
             state.current = payload;
-        }
+        },
+        logoutUser: (state) => {
+            state.current = null;
+        },
     }
 });
 

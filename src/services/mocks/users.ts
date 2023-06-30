@@ -4,7 +4,7 @@ const userList: User[] = [];
 
 export const addUser = (form: User) => {
     userList.push(form);
-    return { ...form, password: null };
+    return form;
 }
 
 export default userList;

@@ -1,6 +1,5 @@
 import { nanoid } from "nanoid";
 import { useNavigate } from "react-router";
-import {Link} from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { useForm } from 'react-hook-form';
 import {Form, Button, InputGroup, Card} from "react-bootstrap";
@@ -8,6 +7,7 @@ import {Form, Button, InputGroup, Card} from "react-bootstrap";
 import { SignupForm } from '../../models';
 import { usersSelectors, usersActions } from "../../store";
 import { createUser } from "../../services";
+import {Link} from "react-router-dom";
 
 export const Signup = () => {
     const {
@@ -23,7 +23,6 @@ export const Signup = () => {
 
     const onSubmit = async (form: SignupForm) => {
         const existing = users.find(u => u.email === form.email);
-console.log({form});
         if (existing) {
             setError('email', { type: 'custom', message: 'email is already registered' });
             return;
@@ -34,7 +33,7 @@ console.log({form});
         dispatch(usersActions.setActiveUser(user.id));
         navigate('/', { replace: true });
     };
-console.log({ errors })
+
     return (
         <div className="d-flex flex-column align-items-center pt-5 gap-3">
             <h1>Sign up</h1>
@@ -62,6 +61,9 @@ console.log({ errors })
                     </Button>
                 </Form>
             </Card>
+            <div>
+                Already have a username and password? <Link to="/login">Login</Link>
+            </div>
         </div>
     )
 }

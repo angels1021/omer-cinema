@@ -41,8 +41,11 @@ nav .nav-tab {
   display: flex;
 }
 
-.user-nav-wrapper .btn a {
+.user-nav-wrapper .btn, .user-nav-wrapper .btn a {
   color: inherit;
+}
+
+.user-nav-wrapper .btn a {
   text-decoration: none;
 }
 
