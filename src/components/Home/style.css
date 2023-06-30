@@ -1,5 +1,29 @@
-.grid-layout {
+.movies-layout {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  gap: 16px;
+  grid-template-columns: repeat(1, 100%);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .movies-layout {
+    grid-template-columns: repeat(3, 33%);
+  }
+}
+
+@media (min-width: 992px) {
+  .movies-layout {
+    grid-template-columns: repeat(4, 24%);
+  }
+}
+
+.movies-layout .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-pills {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
 }
