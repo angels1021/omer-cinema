@@ -1,4 +1,3 @@
-import {Nav} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { BsFillPersonFill } from 'react-icons/bs';
