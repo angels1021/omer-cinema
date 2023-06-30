@@ -1,7 +1,7 @@
 export interface Order {
     id: string;
-    uid: number;
-    mid: number;
+    uid: string;
+    mid: string;
     tickets: number;
 }
 

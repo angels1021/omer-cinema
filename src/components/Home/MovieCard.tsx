@@ -1,7 +1,8 @@
-import {Badge, Card, Button} from "react-bootstrap";
+import { Badge, Card } from "react-bootstrap";
 import { BsYoutube } from 'react-icons/bs';
 
 import {Movie} from "../../models";
+import OrderTickets from './OrderTickets';
 
 const MovieCard = ({ id, name , posterLink, length, releaseYear, videoLink }: Movie) => {
 
@@ -30,7 +31,7 @@ const MovieCard = ({ id, name , posterLink, length, releaseYear, videoLink }: Mo
                         <BsYoutube className="link-danger" /> watch trailer
                     </Card.Link>
                 )}
-                <Button variant="primary">Order tickets</Button>
+                <OrderTickets movieId={id} movieTitle={name} />
             </Card.Body>
         </Card>
 )};

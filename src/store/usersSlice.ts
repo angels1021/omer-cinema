@@ -60,5 +60,6 @@ const selectActiveUser = createSelector(
 export const usersSelectors = {
     selectUsers,
     selectIsInitialized,
+    selectCurrentUserId,
     selectActiveUser,
 }
