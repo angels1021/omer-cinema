@@ -45,6 +45,11 @@ nav .nav-tab {
   color: var(--bs-btn-border-color);
 }
 
+.user-nav-wrapper .btn:hover, .user-nav-wrapper .btn:hover a,
+.user-nav-wrapper .btn:active, .user-nav-wrapper .btn:active a {
+  color: var(--bs-btn-hover-color);
+}
+
 .user-nav-wrapper .btn a {
   text-decoration: none;
 }
