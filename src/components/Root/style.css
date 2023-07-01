@@ -42,7 +42,7 @@ nav .nav-tab {
 }
 
 .user-nav-wrapper .btn, .user-nav-wrapper .btn a {
-  color: inherit;
+  color: var(--bs-btn-border-color);
 }
 
 .user-nav-wrapper .btn a {
@@ -53,4 +53,16 @@ nav .nav-tab {
   .user-nav-wrapper {
     margin-left: unset;
   }
+}
+
+.theme-switcher > button:first-child {
+  padding-left: calc(var(--bs-btn-padding-x) * 2);
+  border-top-left-radius: var(--bs-border-radius-pill);
+  border-bottom-left-radius: var(--bs-border-radius-pill);
+}
+
+.theme-switcher > button:last-child {
+  padding-right: calc(var(--bs-btn-padding-x) * 2);
+  border-top-right-radius: var(--bs-border-radius-pill);
+  border-bottom-right-radius: var(--bs-border-radius-pill);
 }
