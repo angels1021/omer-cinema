@@ -4,11 +4,11 @@ import films, { addMovie } from './mocks/films';
 import users, { addUser } from './mocks/users';
 import orders, { addOrder } from './mocks/orders';
 
-export const api = axios.create();
-
 // export const api = axios.create({
 //     baseURL: 'http://localhost:5206/api'
 // });
+
+export const api = axios.create();
 
 const mock = new MockAdapter(api);
 
