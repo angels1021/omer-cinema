@@ -3,6 +3,6 @@ import { Notyf } from 'notyf';
 
 export default createContext(
     new Notyf({
-        duration: 2000,
+        duration: 5000,
     })
 )
