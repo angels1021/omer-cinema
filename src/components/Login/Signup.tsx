@@ -28,9 +28,9 @@ export const Signup = () => {
             return;
         }
 
-        const { data: user } = await createUser({ ...form, id: nanoid() });
+        const { data: user } = await createUser({ ...form, uid: nanoid() });
         dispatch(usersActions.addUser(user));
-        dispatch(usersActions.setActiveUser(user.id));
+        dispatch(usersActions.setActiveUser(user.uid));
         navigate('/', { replace: true });
     };
 

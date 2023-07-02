@@ -54,7 +54,7 @@ const selectCurrentUserId = createSelector(
 const selectActiveUser = createSelector(
     selectUsers,
     selectCurrentUserId,
-    (users, current) => current && users.find(u => u.id === current),
+    (users, current) => current && users.find(u => u.uid === current),
 );
 
 export const usersSelectors = {

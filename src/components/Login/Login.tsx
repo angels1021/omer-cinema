@@ -27,7 +27,7 @@ export const Login = () => {
             return;
         }
 
-        dispatch(usersActions.setActiveUser(user.id));
+        dispatch(usersActions.setActiveUser(user.uid));
         navigate('/', { replace: true });
     };
 
