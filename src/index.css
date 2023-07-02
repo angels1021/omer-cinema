@@ -29,3 +29,10 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+[data-bs-theme=dark] {
+  --bs-dark: #f8f9fa;
+  --bs-light: #212529;
+  --bs-dark-rgb: 248,249,250;
+  --bs-light-rgb: 33,37,41;
+}
