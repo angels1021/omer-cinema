@@ -54,6 +54,10 @@ nav .nav-tab {
   text-decoration: none;
 }
 
+.user-nav-wrapper .btn.btn-link {
+  color: inherit;
+}
+
 @media (max-width: 991px) {
   .user-nav-wrapper {
     margin-left: unset;

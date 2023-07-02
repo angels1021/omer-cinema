@@ -26,7 +26,7 @@ export const Login = () => {
             setError('password', { type: 'custom', message: 'invalid name or password' });
             return;
         }
-
+console.log({ users, found: user.uid })
         dispatch(usersActions.setActiveUser(user.uid));
         navigate('/', { replace: true });
     };

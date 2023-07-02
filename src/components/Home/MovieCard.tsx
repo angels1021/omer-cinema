@@ -6,7 +6,7 @@ import OrderTickets from './OrderTickets';
 
 const MovieCard = ({ id, name , posterLink, length, releaseYear, videoLink }: Movie) => {
 
-    return (
+    return posterLink ? (
         <Card key={id}>
             <Card.Img
                 variant="top"
@@ -34,6 +34,7 @@ const MovieCard = ({ id, name , posterLink, length, releaseYear, videoLink }: Mo
                 <OrderTickets movieId={id} movieTitle={name} />
             </Card.Body>
         </Card>
-)};
+    ): null;
+};
 
 export default MovieCard;

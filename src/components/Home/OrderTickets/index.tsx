@@ -29,7 +29,7 @@ const OrderTickets = ({ movieTitle, movieId }: Props) => {
                 <Modal.Header closeButton>
                     <Modal.Title><BsFilm /> Order Tickets</Modal.Title>
                 </Modal.Header>
-                {userId ? (
+                {userId !== undefined ? (
                     <OrderTicketsForm
                         userId={userId}
                         movieId={movieId}

@@ -6,7 +6,7 @@ import {User} from '../models';
 export interface UsersState {
     items: User[];
     initialized?: boolean;
-    current?: string | null;
+    current?: string;
 }
 
 const initialState: UsersState = {
@@ -29,7 +29,7 @@ export const { actions: usersActions, reducer: usersReducer } = createSlice({
             state.current = payload;
         },
         logoutUser: (state) => {
-            state.current = null;
+            state.current = undefined;
         },
     }
 });
@@ -54,7 +54,7 @@ const selectCurrentUserId = createSelector(
 const selectActiveUser = createSelector(
     selectUsers,
     selectCurrentUserId,
-    (users, current) => current && users.find(u => u.uid === current),
+    (users, current) => current !== undefined && users.find(u => u.uid === current),
 );
 
 export const usersSelectors = {
