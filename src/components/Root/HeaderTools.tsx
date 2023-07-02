@@ -15,7 +15,7 @@ export const HeaderTools = () => {
             {user
                 ? (
                     <div className="d-flex gap-1 align-items-center">
-                        <span><BsFillPersonFill /> {user.name}</span>
+                        <span><BsFillPersonFill /> {user.fname}</span>
                         <Button variant="link" onClick={logout}>Logout</Button>
                     </div>
 

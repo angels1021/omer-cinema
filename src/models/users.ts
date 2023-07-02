@@ -1,11 +1,11 @@
 export interface User {
     id: string;
-    name: string;
+    fname: string;
     email: string;
     password: string;
 }
 
 export type SignupForm = Omit<User, 'id'>;
 
-export type LoginForm = Pick<User, 'name'| 'password'>;
+export type LoginForm = Pick<User, 'fname'| 'password'>;
 

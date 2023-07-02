@@ -38,10 +38,10 @@ export const Signup = () => {
         <div className="d-flex flex-column align-items-center pt-5 gap-3">
             <h1>Sign up</h1>
             <Card className="w-50" body>
-                <Form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column align-items-center ps-4 pe-4 pb-2">
+                <Form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column align-items-center ps-4 pe-4 pb-2 gap-2">
                     <Form.Group controlId="userName" className="w-100">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control required pattern="[A-Za-z0-9].{2,}" title="2 or more characters" {...register('name')} />
+                        <Form.Control required pattern="[A-Za-z0-9].{2,}" title="2 or more characters" {...register('fname')} />
                     </Form.Group>
                     <Form.Group controlId="userEmail" className="w-100">
                         <Form.Label>Email</Form.Label>
