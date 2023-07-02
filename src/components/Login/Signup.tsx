@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import { useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { useForm } from 'react-hook-form';
-import {Form, Button, InputGroup, Card} from "react-bootstrap";
+import {Form, Button, InputGroup, Card, Row, Col } from "react-bootstrap";
 
 import { SignupForm } from '../../models';
 import { usersSelectors, usersActions } from "../../store";
@@ -39,10 +39,20 @@ export const Signup = () => {
             <h1>Sign up</h1>
             <Card className="w-50" body>
                 <Form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column align-items-center ps-4 pe-4 pb-2 gap-2">
-                    <Form.Group controlId="userName" className="w-100">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control required pattern="[A-Za-z0-9].{2,}" title="2 or more characters" {...register('fname')} />
-                    </Form.Group>
+                    <Row className="w-100">
+                        <Col className="ps-0">
+                            <Form.Group controlId="firstName">
+                                <Form.Label>First name</Form.Label>
+                                <Form.Control required pattern="[A-Za-z0-9].{2,}" title="2 or more characters" {...register('fname')} />
+                            </Form.Group>
+                        </Col>
+                        <Col className="pe-0">
+                            <Form.Group controlId="lastName">
+                                <Form.Label>Last name</Form.Label>
+                                <Form.Control required pattern="[A-Za-z0-9].{1,}" title="1 or more characters" {...register('lname')} />
+                            </Form.Group>
+                        </Col>
+                    </Row>
                     <Form.Group controlId="userEmail" className="w-100">
                         <Form.Label>Email</Form.Label>
                         <Form.Control required type="email" {...register('email')} />
